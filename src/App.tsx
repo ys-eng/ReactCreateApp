@@ -1,6 +1,8 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import ClockComponent from "./components/ClockComponent";
+import ZenigameButton from "./components/ZenigameButton";
 
 function App() {
   return (
@@ -18,19 +20,8 @@ function App() {
         >
           Learn React
         </a>
-        <button 
-          className="ring-4 
-          font-bold 
-          p-2 
-          mt-4 
-          bg-blue-600 
-          hover:bg-blue-400 
-          focus:outline-none 
-          focus:ring-blue-400 
-          focus:ring-opacity-75"
-        >
-          ゼニガメ
-        </button>
+        <ZenigameButton></ZenigameButton>
+        <ClockComponent></ClockComponent>
       </header>
     </div>
   );
