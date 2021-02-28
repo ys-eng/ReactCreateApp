@@ -24,21 +24,37 @@
   align-items: center;
   z-index: 1;
 }
+.hourSub, .minuteSub, .secondSub {
+  display: flex;
+  justify-content: center;
+}
 .hourSub {
-  width: 10px;
-  height: 150px;
-  background-color: #ddd;
-  border-radius: 6px;
+  height: 240px;
 }
 .minuteSub {
-  width: 6px;
-  height: 200px;
-  background-color: #bbb;
-  border-radius: 6px;
+  height: 280px;
 }
 .secondSub {
-  background-color: #fff;
-  width: 2px;
   height: 300px;
+}
+.hourSub::before {
+  content: "";
+  width: 12px;
+  height: 120px;
+  background-color: #999;
+  border-radius: 6px;
+}
+.minuteSub::before {
+  content: "";
+  width: 8px;
+  height: 140px;
+  background-color: #ccc;
+  border-radius: 6px;
+}
+.secondSub::before {
+  content: "";
+  width: 2px;
+  height: 220px;
+  background-color: #fff;
   border-radius: 6px;
 }
