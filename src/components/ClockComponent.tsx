@@ -2,24 +2,7 @@ import React, { useState } from "react";
 import moment, { Moment } from "moment";
 import "./ClockComponent.css";
 
-// interface DegreeStyle {
-//   transform: string;
-// }
-
 const ClockComponent = () => {
-//   const [hourHandState, setHourHandState] = useState<DegreeStyle>({
-//     transform: "rotate(0deg)",
-//   });
-
-//   const [minuteHandState, setMinuteHandState] = useState<DegreeStyle>({
-//     transform: "rotate(0deg)",
-//   });
-
-//   const [secondHandState, setSecondHandState] = useState<DegreeStyle>({
-//     transform: "rotate(0deg)",
-//   });
-
-//   setInterval(() => {
     const now = moment();
     const hour: number = now.hours();
     const minute: number = now.minutes();
@@ -44,12 +27,17 @@ const ClockComponent = () => {
       transform: `rotate(${second * 6 + deltaMillisecond}deg)`,
     };
 
-//   }, 1000);
   return (
     <div className="clock">
-      <div className="hour" style={HourHandState}></div>
-      <div className="minute" style={MinuteHandState}></div>
-      <div className="second" style={SecondHandState}></div>
+      <div className="hour animate-spin-hour">
+        <div className="hourSub" style={HourHandState}></div>
+      </div>
+      <div className="minute animate-spin-minute">
+        <div className="minuteSub" style={MinuteHandState}></div>
+      </div>
+      <div className="second animate-spin-second">
+        <div className="secondSub" style={SecondHandState}></div>
+      </div>
     </div>
   );
 };

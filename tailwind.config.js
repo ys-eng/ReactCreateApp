@@ -4,7 +4,9 @@ module.exports = {
   theme: {
     extend: {
       animation: {
-        'spin-slow': 'spin 60s linear infinite',
+        'spin-hour': 'spin 43200s linear infinite',
+        'spin-minute': 'spin 3600s linear infinite',
+        'spin-second': 'spin 60s linear infinite',
        },
     },
   },
