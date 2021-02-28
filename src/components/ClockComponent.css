@@ -1,18 +1,17 @@
 .clock {
-  width: 400px;
-  height: 400px;
+  width: 600px;
+  height: 600px;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  border: 1px solid #555;
-  background-image: url(./image/unnamed.jpg);
+  background-image: url(./image/clock.png);
   background-size: cover;
 }
 .clock::before {
   content: "";
-  width: 15px;
-  height: 15px;
+  width: 22px;
+  height: 22px;
   background-color: #000;
   border: 2px solid #fff;
   z-index: 10;
@@ -25,38 +24,36 @@
   border-radius: 50%;
 }
 .hour {
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  height: 300px;
+  z-index: 2;
 }
 .minute {
-  width: 280px;
-  height: 280px;
+  width: 400px;
+  height: 400px;
+  z-index: 3;
 }
 .second {
-  width: 280px;
-  height: 280px;
+  width: 400px;
+  height: 400px;
+  z-index: 4;
 }
 .hour::before {
   content: "";
   width: 10px;
-  height: 100px;
-  background-color: #000;
-  z-index: 1;
+  height: 150px;
+  background-color: #ddd;
   border-radius: 6px;
 }
 .minute::before {
-  content: "";
   width: 6px;
-  height: 140px;
-  background-color: #555;
-  z-index: 2;
+  height: 200px;
+  background-color: #bbb;
   border-radius: 6px;
 }
 .second::before {
-  content: "";
   width: 2px;
-  height: 200px;
-  background-color: #999;
-  z-index: 3;
+  height: 300px;
+  background-color: #fff;
   border-radius: 6px;
 }

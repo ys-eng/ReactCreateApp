@@ -2,24 +2,24 @@ import React, { useState } from "react";
 import moment, { Moment } from "moment";
 import "./ClockComponent.css";
 
-interface DegreeStyle {
-  transform: string;
-}
+// interface DegreeStyle {
+//   transform: string;
+// }
 
 const ClockComponent = () => {
-  const [hourHandState, setHourHandState] = useState<DegreeStyle>({
-    transform: "rotate(0deg)",
-  });
+//   const [hourHandState, setHourHandState] = useState<DegreeStyle>({
+//     transform: "rotate(0deg)",
+//   });
 
-  const [minuteHandState, setMinuteHandState] = useState<DegreeStyle>({
-    transform: "rotate(0deg)",
-  });
+//   const [minuteHandState, setMinuteHandState] = useState<DegreeStyle>({
+//     transform: "rotate(0deg)",
+//   });
 
-  const [secondHandState, setSecondHandState] = useState<DegreeStyle>({
-    transform: "rotate(0deg)",
-  });
+//   const [secondHandState, setSecondHandState] = useState<DegreeStyle>({
+//     transform: "rotate(0deg)",
+//   });
 
-  setInterval(() => {
+//   setInterval(() => {
     const now = moment();
     const hour: number = now.hours();
     const minute: number = now.minutes();
@@ -28,28 +28,28 @@ const ClockComponent = () => {
 
     // 時針は1時間で360/12度、1分間で360/12/60度、1秒間で360/12/60/60度動く
     const deltaMinute = minute === 0 ? 0 : (minute * 360) / 12 / 60;
-    setHourHandState ({
+    const HourHandState = {
       transform: `rotate(${hour * 30 + deltaMinute}deg)`,
-    });
+    };
 
     // 分針は1時間で360度、1分間で360/60度、1秒間で360/60/60度動く
     const deltaSecond = second === 0 ? 0 : (second * 360) / 60 / 60;
-    setMinuteHandState ({ 
+    const MinuteHandState = { 
       transform: `rotate(${minute * 6 + deltaSecond}deg)`,
-    });
+    };
 
     // 秒針は1分間で360度、1秒間で360/60度動く、1ミリ秒で360/60/1000度動く
     const deltaMillisecond = millisecond === 0 ? 0 : (millisecond * 360) / 60 / 1000;
-    setSecondHandState ({ 
+    const SecondHandState = { 
       transform: `rotate(${second * 6 + deltaMillisecond}deg)`,
-    });
+    };
 
-  }, 1000);
+//   }, 1000);
   return (
     <div className="clock">
-      <div className="hour" style={hourHandState}></div>
-      <div className="minute" style={minuteHandState}></div>
-      <div className="second" style={secondHandState}></div>
+      <div className="hour" style={HourHandState}></div>
+      <div className="minute" style={MinuteHandState}></div>
+      <div className="second" style={SecondHandState}></div>
     </div>
   );
 };
