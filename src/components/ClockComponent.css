@@ -1,0 +1,33 @@
+.clock::before {
+  content: "";
+  width: 22px;
+  height: 22px;
+  background-color: #000;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  z-index: 11;
+}
+
+.hourSub::before {
+  content: "";
+  width: 12px;
+  height: 120px;
+  background-color: #999;
+  border-radius: 6px;
+}
+
+.minuteSub::before {
+  content: "";
+  width: 8px;
+  height: 140px;
+  background-color: #ccc;
+  border-radius: 6px;
+}
+
+.secondSub::before {
+  content: "";
+  width: 2px;
+  height: 220px;
+  background-color: #fff;
+  border-radius: 6px;
+}
