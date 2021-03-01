@@ -27,13 +27,13 @@ const ClockComponent = () => {
 
   return (
     <div className="clock rounded-full w-clock h-clock bg-cover flex justify-center items-center bg-clock">
-      <div className="hour animate-spin-hour">
+      <div className="hour animate-spin-hour absolute flex justify-center items-center z-10">
         <div className="hourSub flex justify-center h-hour" style={HourHandState}></div>
       </div>
-      <div className="minute animate-spin-minute">
+      <div className="minute animate-spin-minute absolute flex justify-center items-center z-10">
         <div className="minuteSub flex justify-center h-minute" style={MinuteHandState}></div>
       </div>
-      <div className="second animate-spin-second">
+      <div className="second animate-spin-second absolute flex justify-center items-center z-10">
         <div className="secondSub flex justify-center h-second" style={SecondHandState}></div>
       </div>
     </div>
