@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
         <img src={logo} className="App-logo" alt="logo" />
-        <div className="reactClock absolute">
+        <div className="absolute">
           <ClockComponent></ClockComponent>
         </div>
     </div>

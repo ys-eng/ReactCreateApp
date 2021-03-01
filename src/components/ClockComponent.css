@@ -1,13 +1,3 @@
-.clock {
-  width: 600px;
-  height: 600px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  background-image: url(./image/clock.png);
-  background-size: cover;
-}
 .clock::before {
   content: "";
   width: 22px;

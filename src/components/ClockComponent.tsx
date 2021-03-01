@@ -26,7 +26,7 @@ const ClockComponent = () => {
     };
 
   return (
-    <div className="clock">
+    <div className="clock rounded-full w-clock h-clock bg-cover flex justify-center items-center bg-clock">
       <div className="hour animate-spin-hour">
         <div className="hourSub" style={HourHandState}></div>
       </div>

@@ -8,6 +8,15 @@ module.exports = {
         'spin-minute': 'spin 3600s linear infinite',
         'spin-second': 'spin 60s linear infinite',
        },
+      backgroundImage: {
+        'clock': "url('/src/components/image/clock.png')",
+      },
+    },
+    width: {
+      "clock": "600px",
+    },
+    height: {
+      "clock": "600px",
     },
   },
   variants: {
