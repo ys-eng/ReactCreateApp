@@ -2,7 +2,6 @@ import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import ClockComponent from "./components/ClockComponent";
-import ZenigameButton from "./components/ZenigameButton";
 
 function App() {
   return (
