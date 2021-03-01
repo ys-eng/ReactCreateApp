@@ -17,6 +17,9 @@ module.exports = {
     },
     height: {
       "clock": "600px",
+      "hour": "240px",
+      "minute": "280px",
+      "second": "300px",
     },
   },
   variants: {

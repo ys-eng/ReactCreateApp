@@ -14,19 +14,6 @@
   align-items: center;
   z-index: 1;
 }
-.hourSub, .minuteSub, .secondSub {
-  display: flex;
-  justify-content: center;
-}
-.hourSub {
-  height: 240px;
-}
-.minuteSub {
-  height: 280px;
-}
-.secondSub {
-  height: 300px;
-}
 .hourSub::before {
   content: "";
   width: 12px;
