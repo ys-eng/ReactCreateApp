@@ -15,13 +15,21 @@ module.exports = {
     },
     width: {
       "clock": "600px",
+      "clockPointer": "22px",
+      "hourHand": "12px",
+      "minuteHand": "8px",
+      "secondHand": "2px",
     },
     height: {
       "clock": "600px",
+      "clockPointer": "22px",
       "reactLogo": "150px",
       "hour": "240px",
       "minute": "280px",
       "second": "300px",
+      "hourHand": "120px",
+      "minuteHand": "140px",
+      "secondHand": "220px",
     },
   },
   variants: {
