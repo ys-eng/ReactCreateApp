@@ -1,6 +1,7 @@
 import React from "react";
 import moment, { Moment } from "moment";
 import logo from "../logo.svg";
+import { Link } from "react-router-dom";
 
 const ClockComponent = () => {
     const now = moment();
@@ -26,26 +27,29 @@ const ClockComponent = () => {
     };
 
   return (
-    <div className="App flex justify-center items-center">
-      <img src={logo} className="App-logo z-10 h-reactLogo animate-spin-reactLogo absolute" alt="logo" />
-      <div className="clock rounded-full w-clock h-clock bg-cover flex justify-center items-center bg-clock">
-      <div className="bg-black h-clockPointer w-clockPointer rounded-full border-2 border-solid z-30"></div>
-        <div className="hour animate-spin-hour absolute flex justify-center items-center z-20">
-          <div className="hourSub flex justify-center h-hour" style={HourHandState}>
-            <div className="w-hourHand h-hourHand rounded bg-gray-400"></div>
+    <div>
+      <div className="flex justify-center items-center">
+        <img src={logo} className="z-10 h-reactLogo animate-spin-reactLogo absolute" alt="logo" />
+        <div className="rounded-full w-clock h-clock bg-cover flex justify-center items-center bg-clock">
+        <div className="bg-black h-clockPointer w-clockPointer rounded-full border-2 border-solid z-30"></div>
+          <div className="animate-spin-hour absolute flex justify-center items-center z-20">
+            <div className="flex justify-center h-hour" style={HourHandState}>
+              <div className="w-hourHand h-hourHand rounded bg-gray-400"></div>
+            </div>
           </div>
-        </div>
-        <div className="minute animate-spin-minute absolute flex justify-center items-center z-20">
-          <div className="minuteSub flex justify-center h-minute" style={MinuteHandState}>
-            <div className="w-minuteHand h-minuteHand rounded bg-gray-300"></div>
+          <div className="animate-spin-minute absolute flex justify-center items-center z-20">
+            <div className="flex justify-center h-minute" style={MinuteHandState}>
+              <div className="w-minuteHand h-minuteHand rounded bg-gray-300"></div>
+            </div>
           </div>
-        </div>
-        <div className="second animate-spin-second absolute flex justify-center items-center z-20">
-          <div className="secondSub flex justify-center h-second" style={SecondHandState}>
-            <div className="w-secondHand h-secondHand bg-white"></div>
+          <div className="animate-spin-second absolute flex justify-center items-center z-20">
+            <div className="flex justify-center h-second" style={SecondHandState}>
+              <div className="w-secondHand h-secondHand bg-white"></div>
+            </div>
           </div>
         </div>
       </div>
+      <Link to="/Calculator">電卓</Link>
     </div>
   );
 };

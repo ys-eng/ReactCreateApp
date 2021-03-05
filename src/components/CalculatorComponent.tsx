@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const CalculatorComponent = () => {
   // const btns: string[] = [
@@ -126,6 +127,7 @@ const CalculatorComponent = () => {
     <div className="calculator-button button-0" id="button-0">0</div>
     <div className="calculator-button button-dot" id="button-dot">.</div>
     <div className="calculator-button button-eq" id="button-eq">=</div>
+    <Link to="/">時計</Link>
   </div>
   )
 };
