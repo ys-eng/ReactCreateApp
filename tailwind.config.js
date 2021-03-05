@@ -7,7 +7,8 @@ module.exports = {
         'spin-hour': 'spin 43200s linear infinite',
         'spin-minute': 'spin 3600s linear infinite',
         'spin-second': 'spin 60s linear infinite',
-       },
+        'spin-reactLogo': 'spin 25s linear infinite reverse',
+      },
       backgroundImage: {
         'clock': "url('/src/components/image/clock.png')",
       },
@@ -17,6 +18,7 @@ module.exports = {
     },
     height: {
       "clock": "600px",
+      "reactLogo": "150px",
       "hour": "240px",
       "minute": "280px",
       "second": "300px",
