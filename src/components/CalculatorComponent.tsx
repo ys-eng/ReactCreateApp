@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import CalcBtnComponent from "./CalcBtnComponent";
 
 const CalculatorComponent = () => {
   // const btns: string[] = [
@@ -16,7 +17,7 @@ const CalculatorComponent = () => {
   //   "dot",
   // ];
   // const operatorArray: string[] = ["plus", "minus", "multiply", "divide"];
-  
+
   // let calcArray: string[] = [];
   // let totalArray: string[] = [];
   // let check: string = "";
@@ -29,7 +30,7 @@ const CalculatorComponent = () => {
   //   multiply = "multiply",
   //   divide = "divide",
   // }
-  
+
   // for (const elementId of btns) {
   //   let value: string = elementId;
   //   if (value === "dot") {
@@ -48,7 +49,7 @@ const CalculatorComponent = () => {
   //     }
   //   };
   // }
-  
+
   // // 演算子ボタン
   // for (const operator of operatorArray) {
   //   const btnOperator: HTMLElement = <HTMLElement>(
@@ -79,7 +80,7 @@ const CalculatorComponent = () => {
   //   totalArray.push(result);
   //   check = CalcStatus.calcEnd;
   // };
-  
+
   // const sum = (totalArray: string[], calcStatus: string): string => {
   //   let func;
   //   if (calcStatus === CalcStatus.plus) {
@@ -93,7 +94,7 @@ const CalculatorComponent = () => {
   //   }
   //   return String(totalArray.map(Number).reduce(func));
   // };
-  
+
   // // クリアボタン
   // const btnclear: HTMLElement = <HTMLElement>(
   //   document.getElementById(`button-clear`)
@@ -105,30 +106,41 @@ const CalculatorComponent = () => {
   //   check = CalcStatus.empty;
   // };
 
+  const grayColor = "bg-gray-600 hover:bg-gray-400 text-white";
+  const whiteColor = "bg-gray-300 hover:bg-gray-100 text-black";
+  const orangeColor = "bg-yellow-500 hover:bg-yellow-300 text-white";
+
   return (
     <div>
       <Link to="/">時計</Link>
+
       <div className="grid grid-cols-calculator grid-rows-calculator w-calculator m-calculator p-calculator bg-black gap-calculator">
-        <div className="bg-black text-white col-span-4 text-6xl mb-result pr-result text-right leading-result">0</div>
-        <div className="button-clear bg-gray-300 hover:bg-gray-100 text-black text-center leading-button text-5xl cursor-pointer rounded-full">C</div>
-        <div className="button-plus-minus bg-gray-300 hover:bg-gray-100 text-black text-center leading-button text-5xl cursor-pointer rounded-full">+/-</div>
-        <div className="button-p bg-gray-300 hover:bg-gray-100 text-black text-center leading-button text-5xl cursor-pointer rounded-full">%</div>
-        <div className="button-divide bg-yellow-500 hover:bg-yellow-300 text-white text-center leading-button text-5xl cursor-pointer rounded-full">÷</div>
-        <div className="button-7 bg-gray-600 hover:bg-gray-400 text-white text-center leading-button text-5xl cursor-pointer rounded-full">7</div>
-        <div className="button-8 bg-gray-600 hover:bg-gray-400 text-white text-center leading-button text-5xl cursor-pointer rounded-full">8</div>
-        <div className="button-9 bg-gray-600 hover:bg-gray-400 text-white text-center leading-button text-5xl cursor-pointer rounded-full">9</div>
-        <div className="button-multiply bg-yellow-500 hover:bg-yellow-300 text-white text-center leading-button text-5xl cursor-pointer rounded-full">×</div>
-        <div className="button-4 bg-gray-600 hover:bg-gray-400 text-white text-center leading-button text-5xl cursor-pointer rounded-full">4</div>
-        <div className="button-5 bg-gray-600 hover:bg-gray-400 text-white text-center leading-button text-5xl cursor-pointer rounded-full">5</div>
-        <div className="button-6 bg-gray-600 hover:bg-gray-400 text-white text-center leading-button text-5xl cursor-pointer rounded-full">6</div>
-        <div className="button-minus bg-yellow-500 hover:bg-yellow-300 text-white text-center leading-button text-5xl cursor-pointer rounded-full">−</div>
-        <div className="button-1 bg-gray-600 hover:bg-gray-400 text-white text-center leading-button text-5xl cursor-pointer rounded-full">1</div>
-        <div className="button-2 bg-gray-600 hover:bg-gray-400 text-white text-center leading-button text-5xl cursor-pointer rounded-full">2</div>
-        <div className="button-3 bg-gray-600 hover:bg-gray-400 text-white text-center leading-button text-5xl cursor-pointer rounded-full">3</div>
-        <div className="button-plus bg-yellow-500 hover:bg-yellow-300 text-white text-center leading-button text-5xl cursor-pointer rounded-full">＋</div>
-        <div className="button-0 col-span-2 bg-gray-600 hover:bg-gray-400 text-white text-center leading-button text-5xl cursor-pointer rounded-full">0</div>
-        <div className="button-dot bg-gray-600 hover:bg-gray-400 text-white text-center leading-button text-5xl cursor-pointer rounded-full">.</div>
-        <div className="button-eq bg-yellow-500 hover:bg-yellow-300 text-white text-center leading-button text-5xl cursor-pointer rounded-full">=</div>
+        {/* 計算結果 */}
+        <div className="bg-black text-white col-span-4 text-6xl mb-result pr-result text-right leading-result">
+          0
+        </div>
+        <CalcBtnComponent title="C" className={whiteColor}></CalcBtnComponent>
+        <CalcBtnComponent title="+/-" className={whiteColor}></CalcBtnComponent>
+        <CalcBtnComponent title="%" className={whiteColor}></CalcBtnComponent>
+        <CalcBtnComponent title="÷" className={orangeColor}></CalcBtnComponent>
+        <CalcBtnComponent title="7" className={grayColor}></CalcBtnComponent>
+        <CalcBtnComponent title="8" className={grayColor}></CalcBtnComponent>
+        <CalcBtnComponent title="9" className={grayColor}></CalcBtnComponent>
+        <CalcBtnComponent title="×" className={orangeColor}></CalcBtnComponent>
+        <CalcBtnComponent title="4" className={grayColor}></CalcBtnComponent>
+        <CalcBtnComponent title="5" className={grayColor}></CalcBtnComponent>
+        <CalcBtnComponent title="6" className={grayColor}></CalcBtnComponent>
+        <CalcBtnComponent title="−" className={orangeColor}></CalcBtnComponent>
+        <CalcBtnComponent title="1" className={grayColor}></CalcBtnComponent>
+        <CalcBtnComponent title="2" className={grayColor}></CalcBtnComponent>
+        <CalcBtnComponent title="3" className={grayColor}></CalcBtnComponent>
+        <CalcBtnComponent title="＋" className={orangeColor}></CalcBtnComponent>
+        <CalcBtnComponent
+          title="0"
+          className={`col-span-2 ${grayColor}`}
+        ></CalcBtnComponent>
+        <CalcBtnComponent title="." className={grayColor}></CalcBtnComponent>
+        <CalcBtnComponent title="=" className={orangeColor}></CalcBtnComponent>
       </div>
     </div>
   );
