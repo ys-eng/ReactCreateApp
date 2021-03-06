@@ -25,9 +25,10 @@ const ClockComponent = () => {
     const SecondHandState = { 
       transform: `rotate(${second * 6 + deltaMillisecond}deg)`,
     };
-
-  return (
-    <div>
+    
+    return (
+      <div>
+      <Link to="/Calculator">電卓</Link>
       <div className="flex justify-center items-center">
         <img src={logo} className="z-10 h-reactLogo animate-spin-reactLogo absolute" alt="logo" />
         <div className="rounded-full w-clock h-clock bg-cover flex justify-center items-center bg-clock">
@@ -49,7 +50,6 @@ const ClockComponent = () => {
           </div>
         </div>
       </div>
-      <Link to="/Calculator">電卓</Link>
     </div>
   );
 };

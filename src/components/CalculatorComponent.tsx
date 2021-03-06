@@ -104,32 +104,34 @@ const CalculatorComponent = () => {
   //   totalArray = [];
   //   check = CalcStatus.empty;
   // };
-  
+
   return (
-    <div className="calculator">
-    <div className="calculator-button button-result" id="button-result">0</div>
-    <div className="calculator-button button-clear" id="button-clear">C</div>
-    <div className="calculator-button button-plus-minus" id="button-plus-minus">+/-</div>
-    <div className="calculator-button button-p" id="button-p">%</div>
-    <div className="calculator-button button-divide" id="button-divide">÷</div>
-    <div className="calculator-button button-7" id="button-7">7</div>
-    <div className="calculator-button button-8" id="button-8">8</div>
-    <div className="calculator-button button-9" id="button-9">9</div>
-    <div className="calculator-button button-multiply" id="button-multiply">×</div>
-    <div className="calculator-button button-4" id="button-4">4</div>
-    <div className="calculator-button button-5" id="button-5">5</div>
-    <div className="calculator-button button-6" id="button-6">6</div>
-    <div className="calculator-button button-minus" id="button-minus">−</div>
-    <div className="calculator-button button-1" id="button-1">1</div>
-    <div className="calculator-button button-2" id="button-2">2</div>
-    <div className="calculator-button button-3" id="button-3">3</div>
-    <div className="calculator-button button-plus" id="button-plus">＋</div>
-    <div className="calculator-button button-0" id="button-0">0</div>
-    <div className="calculator-button button-dot" id="button-dot">.</div>
-    <div className="calculator-button button-eq" id="button-eq">=</div>
-    <Link to="/">時計</Link>
-  </div>
-  )
+    <div>
+      <Link to="/">時計</Link>
+      <div className="grid grid-cols-calculator grid-rows-calculator w-calculator m-calculator p-calculator bg-black gap-calculator">
+        <div className="bg-black text-white col-span-4 text-6xl mb-result pr-result text-right leading-result">0</div>
+        <div className="button-clear bg-gray-300 hover:bg-gray-100 text-black text-center leading-button text-5xl cursor-pointer rounded-full">C</div>
+        <div className="button-plus-minus bg-gray-300 hover:bg-gray-100 text-black text-center leading-button text-5xl cursor-pointer rounded-full">+/-</div>
+        <div className="button-p bg-gray-300 hover:bg-gray-100 text-black text-center leading-button text-5xl cursor-pointer rounded-full">%</div>
+        <div className="button-divide bg-yellow-500 hover:bg-yellow-300 text-white text-center leading-button text-5xl cursor-pointer rounded-full">÷</div>
+        <div className="button-7 bg-gray-600 hover:bg-gray-400 text-white text-center leading-button text-5xl cursor-pointer rounded-full">7</div>
+        <div className="button-8 bg-gray-600 hover:bg-gray-400 text-white text-center leading-button text-5xl cursor-pointer rounded-full">8</div>
+        <div className="button-9 bg-gray-600 hover:bg-gray-400 text-white text-center leading-button text-5xl cursor-pointer rounded-full">9</div>
+        <div className="button-multiply bg-yellow-500 hover:bg-yellow-300 text-white text-center leading-button text-5xl cursor-pointer rounded-full">×</div>
+        <div className="button-4 bg-gray-600 hover:bg-gray-400 text-white text-center leading-button text-5xl cursor-pointer rounded-full">4</div>
+        <div className="button-5 bg-gray-600 hover:bg-gray-400 text-white text-center leading-button text-5xl cursor-pointer rounded-full">5</div>
+        <div className="button-6 bg-gray-600 hover:bg-gray-400 text-white text-center leading-button text-5xl cursor-pointer rounded-full">6</div>
+        <div className="button-minus bg-yellow-500 hover:bg-yellow-300 text-white text-center leading-button text-5xl cursor-pointer rounded-full">−</div>
+        <div className="button-1 bg-gray-600 hover:bg-gray-400 text-white text-center leading-button text-5xl cursor-pointer rounded-full">1</div>
+        <div className="button-2 bg-gray-600 hover:bg-gray-400 text-white text-center leading-button text-5xl cursor-pointer rounded-full">2</div>
+        <div className="button-3 bg-gray-600 hover:bg-gray-400 text-white text-center leading-button text-5xl cursor-pointer rounded-full">3</div>
+        <div className="button-plus bg-yellow-500 hover:bg-yellow-300 text-white text-center leading-button text-5xl cursor-pointer rounded-full">＋</div>
+        <div className="button-0 col-span-2 bg-gray-600 hover:bg-gray-400 text-white text-center leading-button text-5xl cursor-pointer rounded-full">0</div>
+        <div className="button-dot bg-gray-600 hover:bg-gray-400 text-white text-center leading-button text-5xl cursor-pointer rounded-full">.</div>
+        <div className="button-eq bg-yellow-500 hover:bg-yellow-300 text-white text-center leading-button text-5xl cursor-pointer rounded-full">=</div>
+      </div>
+    </div>
+  );
 };
 
 export default CalculatorComponent;
