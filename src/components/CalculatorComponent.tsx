@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import CalcBtnComponent from "./CalcBtnComponent";
 
@@ -105,10 +105,13 @@ const CalculatorComponent = () => {
   //   totalArray = [];
   //   check = CalcStatus.empty;
   // };
-
+  const [display, setDisplay] = useState("0");
   const grayColor = "bg-gray-600 hover:bg-gray-400 text-white";
   const whiteColor = "bg-gray-300 hover:bg-gray-100 text-black";
   const orangeColor = "bg-yellow-500 hover:bg-yellow-300 text-white";
+  const clickCalcBtn = (title: string) => {
+    setDisplay(title);
+  };
 
   return (
     <div>
@@ -117,30 +120,103 @@ const CalculatorComponent = () => {
       <div className="grid grid-cols-calculator grid-rows-calculator w-calculator m-calculator p-calculator bg-black gap-calculator">
         {/* 計算結果 */}
         <div className="bg-black text-white col-span-4 text-6xl mb-result pr-result text-right leading-result">
-          0
+          {display}
         </div>
-        <CalcBtnComponent title="C" className={whiteColor}></CalcBtnComponent>
-        <CalcBtnComponent title="+/-" className={whiteColor}></CalcBtnComponent>
-        <CalcBtnComponent title="%" className={whiteColor}></CalcBtnComponent>
-        <CalcBtnComponent title="÷" className={orangeColor}></CalcBtnComponent>
-        <CalcBtnComponent title="7" className={grayColor}></CalcBtnComponent>
-        <CalcBtnComponent title="8" className={grayColor}></CalcBtnComponent>
-        <CalcBtnComponent title="9" className={grayColor}></CalcBtnComponent>
-        <CalcBtnComponent title="×" className={orangeColor}></CalcBtnComponent>
-        <CalcBtnComponent title="4" className={grayColor}></CalcBtnComponent>
-        <CalcBtnComponent title="5" className={grayColor}></CalcBtnComponent>
-        <CalcBtnComponent title="6" className={grayColor}></CalcBtnComponent>
-        <CalcBtnComponent title="−" className={orangeColor}></CalcBtnComponent>
-        <CalcBtnComponent title="1" className={grayColor}></CalcBtnComponent>
-        <CalcBtnComponent title="2" className={grayColor}></CalcBtnComponent>
-        <CalcBtnComponent title="3" className={grayColor}></CalcBtnComponent>
-        <CalcBtnComponent title="＋" className={orangeColor}></CalcBtnComponent>
+        <CalcBtnComponent
+          title="C"
+          className={whiteColor}
+          onClickCalcBtn={clickCalcBtn}
+        ></CalcBtnComponent>
+        <CalcBtnComponent
+          title="+/-"
+          className={whiteColor}
+          onClickCalcBtn={clickCalcBtn}
+        ></CalcBtnComponent>
+        <CalcBtnComponent
+          title="%"
+          className={whiteColor}
+          onClickCalcBtn={clickCalcBtn}
+        ></CalcBtnComponent>
+        <CalcBtnComponent
+          title="÷"
+          className={orangeColor}
+          onClickCalcBtn={clickCalcBtn}
+        ></CalcBtnComponent>
+        <CalcBtnComponent
+          title="7"
+          className={grayColor}
+          onClickCalcBtn={clickCalcBtn}
+        ></CalcBtnComponent>
+        <CalcBtnComponent
+          title="8"
+          className={grayColor}
+          onClickCalcBtn={clickCalcBtn}
+        ></CalcBtnComponent>
+        <CalcBtnComponent
+          title="9"
+          className={grayColor}
+          onClickCalcBtn={clickCalcBtn}
+        ></CalcBtnComponent>
+        <CalcBtnComponent
+          title="×"
+          className={orangeColor}
+          onClickCalcBtn={clickCalcBtn}
+        ></CalcBtnComponent>
+        <CalcBtnComponent
+          title="4"
+          className={grayColor}
+          onClickCalcBtn={clickCalcBtn}
+        ></CalcBtnComponent>
+        <CalcBtnComponent
+          title="5"
+          className={grayColor}
+          onClickCalcBtn={clickCalcBtn}
+        ></CalcBtnComponent>
+        <CalcBtnComponent
+          title="6"
+          className={grayColor}
+          onClickCalcBtn={clickCalcBtn}
+        ></CalcBtnComponent>
+        <CalcBtnComponent
+          title="−"
+          className={orangeColor}
+          onClickCalcBtn={clickCalcBtn}
+        ></CalcBtnComponent>
+        <CalcBtnComponent
+          title="1"
+          className={grayColor}
+          onClickCalcBtn={clickCalcBtn}
+        ></CalcBtnComponent>
+        <CalcBtnComponent
+          title="2"
+          className={grayColor}
+          onClickCalcBtn={clickCalcBtn}
+        ></CalcBtnComponent>
+        <CalcBtnComponent
+          title="3"
+          className={grayColor}
+          onClickCalcBtn={clickCalcBtn}
+        ></CalcBtnComponent>
+        <CalcBtnComponent
+          title="＋"
+          className={orangeColor}
+          onClickCalcBtn={clickCalcBtn}
+        ></CalcBtnComponent>
         <CalcBtnComponent
           title="0"
           className={`col-span-2 ${grayColor}`}
+          onClickCalcBtn={clickCalcBtn}
         ></CalcBtnComponent>
-        <CalcBtnComponent title="." className={grayColor}></CalcBtnComponent>
-        <CalcBtnComponent title="=" className={orangeColor}></CalcBtnComponent>
+        <CalcBtnComponent
+          title="."
+          className={grayColor}
+          onClickCalcBtn={clickCalcBtn}
+        ></CalcBtnComponent>
+        <CalcBtnComponent
+          title="="
+          className={orangeColor}
+          onClickCalcBtn={clickCalcBtn}
+        ></CalcBtnComponent>
       </div>
     </div>
   );
