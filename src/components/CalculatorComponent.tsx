@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import CalcBtnComponent from "./CalcBtnComponent";
 
+let calcArray: string[] = [];
 const CalculatorComponent = () => {
   // const btns: string[] = [
   //   "0",
@@ -105,12 +106,14 @@ const CalculatorComponent = () => {
   //   totalArray = [];
   //   check = CalcStatus.empty;
   // };
-  const [display, setDisplay] = useState("0");
   const grayColor = "bg-gray-600 hover:bg-gray-400 text-white";
   const whiteColor = "bg-gray-300 hover:bg-gray-100 text-black";
   const orangeColor = "bg-yellow-500 hover:bg-yellow-300 text-white";
+
+  const [display, setDisplay] = useState("0");
   const clickCalcBtn = (title: string) => {
-    setDisplay(title);
+    calcArray.push(title);
+    setDisplay(calcArray.join(""));
   };
 
   return (
@@ -118,7 +121,7 @@ const CalculatorComponent = () => {
       <Link to="/">時計</Link>
 
       <div className="grid grid-cols-calculator grid-rows-calculator w-calculator m-calculator p-calculator bg-black gap-calculator">
-        {/* 計算結果 */}
+        {/* 出力画面 */}
         <div className="bg-black text-white col-span-4 text-6xl mb-result pr-result text-right leading-result">
           {display}
         </div>
