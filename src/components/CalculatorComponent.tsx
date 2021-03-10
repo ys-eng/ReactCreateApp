@@ -114,6 +114,15 @@ const CalculatorComponent = () => {
   const clickCalcBtn = (title: string) => {
     calcArray.push(title);
     setDisplay(calcArray.join(""));
+    if(title === "＋") {
+      title = "+";
+    } else if(title === "−") {
+      title = "-";
+    } else if(title === "×") {
+      title = "*";
+    } else if(title === "÷") {
+      title = "/";
+    };
   };
 
   return (
