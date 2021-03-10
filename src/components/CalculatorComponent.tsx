@@ -50,6 +50,11 @@ const CalculatorComponent = () => {
     displayArray = [];
     calcArray.push("/");
   };
+  // パーセントボタン
+  const percentBtn = () => {
+    displayArray = [];
+    calcArray.push("%");
+  };
 
   return (
     <div>
@@ -73,7 +78,7 @@ const CalculatorComponent = () => {
         <CalcBtnComponent
           title="%"
           className={whiteColor}
-          onClickCalcBtn={numberBtn}
+          onClickCalcBtn={percentBtn}
         ></CalcBtnComponent>
         <CalcBtnComponent
           title="÷"
