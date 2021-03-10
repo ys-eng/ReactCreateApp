@@ -30,15 +30,20 @@ const CalculatorComponent = () => {
     calcArray = []; 
     setDisplay("0");
   }
-  // プラスボタン
+  // 加算
   const plusBtn = () => {
     displayArray = [];
     calcArray.push("+");
   }
-  // マイナスボタン
+  // 減算
   const minusBtn = () => {
     displayArray = [];
     calcArray.push("-");
+  }
+  // 乗算
+  const multiplyBtn = () => {
+    displayArray = [];
+    calcArray.push("*");
   }
 
   return (
@@ -88,7 +93,7 @@ const CalculatorComponent = () => {
         <CalcBtnComponent
           title="×"
           className={orangeColor}
-          onClickCalcBtn={numberBtn}
+          onClickCalcBtn={multiplyBtn}
         ></CalcBtnComponent>
         <CalcBtnComponent
           title="4"
