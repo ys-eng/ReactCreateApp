@@ -14,47 +14,58 @@ const CalculatorComponent = () => {
   // ナンバーボタン+ドットボタン
   const numberBtn = (title: string) => {
     displayArray.push(title);
-    calcArray.push(title)
     setDisplay(displayArray.join(""));
   };
   // イコールボタン
   const eqBtn = () => {
-    const result = Function('return ('+calcArray.join("")+');')();
-    displayArray = [result];
+    calcArray.push(displayArray.join(""));
+    const result = Function('return ('+calcArray.join(" ")+');')();
+    setDisplay(result);
+    displayArray = [];
     calcArray = [result];
-    setDisplay(displayArray.join(""));
   };
   // クリアボタン
   const clearBtn = () => {
     displayArray = [];
-    calcArray = []; 
+    calcArray = [];
     setDisplay("0");
   };
   // 加算
   const plusBtn = () => {
+    calcArray.push(displayArray.join(""));
     displayArray = [];
     calcArray.push("+");
   };
   // 減算
   const minusBtn = () => {
+    calcArray.push(displayArray.join(""));
     displayArray = [];
     calcArray.push("-");
   };
   // 乗算
   const multiplyBtn = () => {
+    calcArray.push(displayArray.join(""));
     displayArray = [];
     calcArray.push("*");
   };
   // 除算
   const divideBtn = () => {
+    calcArray.push(displayArray.join(""));
     displayArray = [];
     calcArray.push("/");
   };
   // パーセントボタン
   const percentBtn = () => {
+    calcArray.push(displayArray.join(""));
     displayArray = [];
     calcArray.push("%");
   };
+  // プラスマイナスボタン
+  const plusMinusBtn = () => {
+    const plusMinus: string = String(Number(display) * -1)
+    displayArray = [plusMinus];
+    setDisplay(displayArray.join(""));
+  }
 
   return (
     <div>
@@ -73,7 +84,7 @@ const CalculatorComponent = () => {
         <CalcBtnComponent
           title="+/-"
           className={whiteColor}
-          onClickCalcBtn={numberBtn}
+          onClickCalcBtn={plusMinusBtn}
         ></CalcBtnComponent>
         <CalcBtnComponent
           title="%"
