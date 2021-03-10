@@ -35,6 +35,11 @@ const CalculatorComponent = () => {
     displayArray = [];
     calcArray.push("+");
   }
+  // マイナスボタン
+  const minusBtn = () => {
+    displayArray = [];
+    calcArray.push("-");
+  }
 
   return (
     <div>
@@ -103,7 +108,7 @@ const CalculatorComponent = () => {
         <CalcBtnComponent
           title="−"
           className={orangeColor}
-          onClickCalcBtn={numberBtn}
+          onClickCalcBtn={minusBtn}
         ></CalcBtnComponent>
         <CalcBtnComponent
           title="1"
