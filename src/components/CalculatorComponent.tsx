@@ -29,22 +29,27 @@ const CalculatorComponent = () => {
     displayArray = [];
     calcArray = []; 
     setDisplay("0");
-  }
+  };
   // 加算
   const plusBtn = () => {
     displayArray = [];
     calcArray.push("+");
-  }
+  };
   // 減算
   const minusBtn = () => {
     displayArray = [];
     calcArray.push("-");
-  }
+  };
   // 乗算
   const multiplyBtn = () => {
     displayArray = [];
     calcArray.push("*");
-  }
+  };
+  // 除算
+  const divideBtn = () => {
+    displayArray = [];
+    calcArray.push("/");
+  };
 
   return (
     <div>
@@ -73,7 +78,7 @@ const CalculatorComponent = () => {
         <CalcBtnComponent
           title="÷"
           className={orangeColor}
-          onClickCalcBtn={numberBtn}
+          onClickCalcBtn={divideBtn}
         ></CalcBtnComponent>
         <CalcBtnComponent
           title="7"
