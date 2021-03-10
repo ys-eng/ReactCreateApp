@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import CalcBtnComponent from "./CalcBtnComponent";
 
+let displayArray: string[] = [];
 let calcArray: string[] = [];
 const CalculatorComponent = () => {
   // const btns: string[] = [
@@ -112,8 +113,8 @@ const CalculatorComponent = () => {
 
   const [display, setDisplay] = useState("0");
   const clickCalcBtn = (title: string) => {
-    calcArray.push(title);
-    setDisplay(calcArray.join(""));
+    displayArray.push(title);
+    setDisplay(displayArray.join(""));
     if(title === "＋") {
       title = "+";
     } else if(title === "−") {
@@ -123,6 +124,13 @@ const CalculatorComponent = () => {
     } else if(title === "÷") {
       title = "/";
     };
+    calcArray.push(title)
+  };
+  const eqBtn = (title: string) => {
+    const result = Function('return ('+calcArray.join("")+');')();
+    displayArray = [result];
+    setDisplay(displayArray.join(""));
+    calcArray = [result];
   };
 
   return (
@@ -227,7 +235,7 @@ const CalculatorComponent = () => {
         <CalcBtnComponent
           title="="
           className={orangeColor}
-          onClickCalcBtn={clickCalcBtn}
+          onClickCalcBtn={eqBtn}
         ></CalcBtnComponent>
       </div>
     </div>
