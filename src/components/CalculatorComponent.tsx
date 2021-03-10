@@ -126,12 +126,17 @@ const CalculatorComponent = () => {
     };
     calcArray.push(title)
   };
-  const eqBtn = (title: string) => {
+  const eqBtn = () => {
     const result = Function('return ('+calcArray.join("")+');')();
     displayArray = [result];
-    setDisplay(displayArray.join(""));
     calcArray = [result];
+    setDisplay(displayArray.join(""));
   };
+  const clearBtn = () => {
+    displayArray = [];
+    calcArray = []; 
+    setDisplay("0");
+  }
 
   return (
     <div>
@@ -145,7 +150,7 @@ const CalculatorComponent = () => {
         <CalcBtnComponent
           title="C"
           className={whiteColor}
-          onClickCalcBtn={clickCalcBtn}
+          onClickCalcBtn={clearBtn}
         ></CalcBtnComponent>
         <CalcBtnComponent
           title="+/-"
