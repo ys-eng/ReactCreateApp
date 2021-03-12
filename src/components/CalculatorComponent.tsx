@@ -10,6 +10,14 @@ const CalculatorComponent = () => {
   const whiteColor = "bg-gray-300 hover:bg-gray-100 text-black";
   const orangeColor = "bg-yellow-500 hover:bg-yellow-300 text-white";
 
+  enum Operator {
+    Plus="+",
+    Minus="-",
+    Multiply="*",
+    Divide="/",
+    Percent="%",
+  }
+
   const [display, setDisplay] = useState("0");
   // ナンバーボタン+ドットボタン
   const numberBtn = (title: string) => {
@@ -34,31 +42,31 @@ const CalculatorComponent = () => {
   const plusBtn = () => {
     calcArray.push(displayArray.join(""));
     displayArray = [];
-    calcArray.push("+");
+    calcArray.push(Operator.Plus);
   };
   // 減算
   const minusBtn = () => {
     calcArray.push(displayArray.join(""));
     displayArray = [];
-    calcArray.push("-");
+    calcArray.push(Operator.Minus);
   };
   // 乗算
   const multiplyBtn = () => {
     calcArray.push(displayArray.join(""));
     displayArray = [];
-    calcArray.push("*");
+    calcArray.push(Operator.Multiply);
   };
   // 除算
   const divideBtn = () => {
     calcArray.push(displayArray.join(""));
     displayArray = [];
-    calcArray.push("/");
+    calcArray.push(Operator.Divide);
   };
   // パーセントボタン
   const percentBtn = () => {
     calcArray.push(displayArray.join(""));
     displayArray = [];
-    calcArray.push("%");
+    calcArray.push(Operator.Percent);
   };
   // プラスマイナスボタン
   const plusMinusBtn = () => {
