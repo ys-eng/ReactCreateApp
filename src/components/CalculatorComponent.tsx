@@ -17,6 +17,20 @@ const CalculatorComponent = () => {
     Multiply="*",
     Divide="/",
     Percent="%",
+    PlusMinus="+/-",
+    Clear="C",
+    Eq="=",
+    Zero="0",
+    One="1",
+    Two="2",
+    Three="3",
+    Four="4",
+    Five="5",
+    Six="6",
+    Seven="7",
+    Eight="8",
+    Nine="9",
+    Dot="."
   }
 
   const [display, setDisplay] = useState("0");
@@ -37,7 +51,7 @@ const CalculatorComponent = () => {
   const clearBtn = () => {
     displayArray = [];
     calcArray = [];
-    setDisplay("0");
+    setDisplay(Operator.Zero);
   };
   // 加算
   const plusBtn = () => {
@@ -86,17 +100,17 @@ const CalculatorComponent = () => {
           {display}
         </div>
         <CalcOperatorBtnComponent
-          title="C"
+          title={Operator.Clear}
           className={whiteColor}
           onClickCalcBtn={clearBtn}
         ></CalcOperatorBtnComponent>
         <CalcOperatorBtnComponent
-          title="+/-"
+          title={Operator.PlusMinus}
           className={whiteColor}
           onClickCalcBtn={plusMinusBtn}
         ></CalcOperatorBtnComponent>
         <CalcOperatorBtnComponent
-          title="%"
+          title={Operator.Percent}
           className={whiteColor}
           onClickCalcBtn={percentBtn}
         ></CalcOperatorBtnComponent>
@@ -106,17 +120,17 @@ const CalculatorComponent = () => {
           onClickCalcBtn={divideBtn}
         ></CalcOperatorBtnComponent>
         <CalcBtnComponent
-          title="7"
+          title={Operator.Seven}
           className={grayColor}
           onClickCalcBtn={numberBtn}
         ></CalcBtnComponent>
         <CalcBtnComponent
-          title="8"
+          title={Operator.Eight}
           className={grayColor}
           onClickCalcBtn={numberBtn}
         ></CalcBtnComponent>
         <CalcBtnComponent
-          title="9"
+          title={Operator.Nine}
           className={grayColor}
           onClickCalcBtn={numberBtn}
         ></CalcBtnComponent>
@@ -126,17 +140,17 @@ const CalculatorComponent = () => {
           onClickCalcBtn={multiplyBtn}
         ></CalcOperatorBtnComponent>
         <CalcBtnComponent
-          title="4"
+          title={Operator.Four}
           className={grayColor}
           onClickCalcBtn={numberBtn}
         ></CalcBtnComponent>
         <CalcBtnComponent
-          title="5"
+          title={Operator.Five}
           className={grayColor}
           onClickCalcBtn={numberBtn}
         ></CalcBtnComponent>
         <CalcBtnComponent
-          title="6"
+          title={Operator.Six}
           className={grayColor}
           onClickCalcBtn={numberBtn}
         ></CalcBtnComponent>
@@ -146,17 +160,17 @@ const CalculatorComponent = () => {
           onClickCalcBtn={minusBtn}
         ></CalcOperatorBtnComponent>
         <CalcBtnComponent
-          title="1"
+          title={Operator.One}
           className={grayColor}
           onClickCalcBtn={numberBtn}
         ></CalcBtnComponent>
         <CalcBtnComponent
-          title="2"
+          title={Operator.Two}
           className={grayColor}
           onClickCalcBtn={numberBtn}
         ></CalcBtnComponent>
         <CalcBtnComponent
-          title="3"
+          title={Operator.Three}
           className={grayColor}
           onClickCalcBtn={numberBtn}
         ></CalcBtnComponent>
@@ -166,17 +180,17 @@ const CalculatorComponent = () => {
           onClickCalcBtn={plusBtn}
         ></CalcOperatorBtnComponent>
         <CalcBtnComponent
-          title="0"
+          title={Operator.Zero}
           className={`col-span-2 ${grayColor}`}
           onClickCalcBtn={numberBtn}
         ></CalcBtnComponent>
         <CalcBtnComponent
-          title="."
+          title={Operator.Dot}
           className={grayColor}
           onClickCalcBtn={numberBtn}
         ></CalcBtnComponent>
         <CalcOperatorBtnComponent
-          title="="
+          title="＝"
           className={orangeColor}
           onClickCalcBtn={eqBtn}
         ></CalcOperatorBtnComponent>
