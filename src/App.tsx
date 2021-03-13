@@ -8,7 +8,7 @@ function App() {
     <BrowserRouter>
       <Switch>
         <Route path="/" exact component={ClockComponent} />
-        <Route path="/Calculator" exact component={CalculatorComponent} />
+        <Route path="/calculator" exact component={CalculatorComponent} />
         <Redirect to="/" />
       </Switch>
     </BrowserRouter>

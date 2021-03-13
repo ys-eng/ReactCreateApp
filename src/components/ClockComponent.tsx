@@ -28,7 +28,7 @@ const ClockComponent = () => {
     
     return (
       <div>
-      <Link to="/Calculator">電卓</Link>
+      <Link to="/calculator">電卓</Link>
       <div className="flex justify-center items-center">
         <img src={logo} className="z-10 h-reactLogo animate-spin-reactLogo absolute" alt="logo" />
         <div className="rounded-full w-clock h-clock bg-cover flex justify-center items-center bg-clock">
