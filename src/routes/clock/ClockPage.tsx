@@ -1,6 +1,6 @@
 import React from "react";
 import moment, { Moment } from "moment";
-import logo from "../logo.svg";
+import logo from "../../logo.svg";
 import { Link } from "react-router-dom";
 
 const ClockComponent = () => {

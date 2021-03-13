@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import CalcBtnComponent from "./CalcBtnComponent";
-import CalcOperatorBtnComponent from "./CalcOperatorBtnComponent";
+import CalcBtnComponent from "../../components/CalcBtnComponent";
+import CalcOperatorBtnComponent from "../../components/CalcOperatorBtnComponent";
 
 let displayArray: string[] = [];
 let calcArray: string[] = [];
@@ -92,7 +92,7 @@ const CalculatorComponent = () => {
 
   return (
     <div>
-      <Link to="/">時計</Link>
+      <Link to="/clock">時計</Link>
 
       <div className="grid grid-cols-calculator grid-rows-calculator w-calculator m-calculator p-calculator bg-black gap-calculator">
         {/* 出力画面 */}
