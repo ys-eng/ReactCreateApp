@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import CalcBtnComponent from "./CalcBtnComponent";
-import CalcPlusBtnComponent from "./CalcPlusBtnComponent";
+import CalcOperatorBtnComponent from "./CalcOperatorBtnComponent";
 
 let displayArray: string[] = [];
 let calcArray: string[] = [];
@@ -85,26 +85,26 @@ const CalculatorComponent = () => {
         <div className="bg-black text-white col-span-4 text-6xl mb-result pr-result text-right leading-result">
           {display}
         </div>
-        <CalcBtnComponent
+        <CalcOperatorBtnComponent
           title="C"
           className={whiteColor}
           onClickCalcBtn={clearBtn}
-        ></CalcBtnComponent>
-        <CalcBtnComponent
+        ></CalcOperatorBtnComponent>
+        <CalcOperatorBtnComponent
           title="+/-"
           className={whiteColor}
           onClickCalcBtn={plusMinusBtn}
-        ></CalcBtnComponent>
-        <CalcBtnComponent
+        ></CalcOperatorBtnComponent>
+        <CalcOperatorBtnComponent
           title="%"
           className={whiteColor}
           onClickCalcBtn={percentBtn}
-        ></CalcBtnComponent>
-        <CalcBtnComponent
+        ></CalcOperatorBtnComponent>
+        <CalcOperatorBtnComponent
           title="÷"
           className={orangeColor}
           onClickCalcBtn={divideBtn}
-        ></CalcBtnComponent>
+        ></CalcOperatorBtnComponent>
         <CalcBtnComponent
           title="7"
           className={grayColor}
@@ -120,11 +120,11 @@ const CalculatorComponent = () => {
           className={grayColor}
           onClickCalcBtn={numberBtn}
         ></CalcBtnComponent>
-        <CalcBtnComponent
+        <CalcOperatorBtnComponent
           title="×"
           className={orangeColor}
           onClickCalcBtn={multiplyBtn}
-        ></CalcBtnComponent>
+        ></CalcOperatorBtnComponent>
         <CalcBtnComponent
           title="4"
           className={grayColor}
@@ -140,11 +140,11 @@ const CalculatorComponent = () => {
           className={grayColor}
           onClickCalcBtn={numberBtn}
         ></CalcBtnComponent>
-        <CalcBtnComponent
+        <CalcOperatorBtnComponent
           title="−"
           className={orangeColor}
           onClickCalcBtn={minusBtn}
-        ></CalcBtnComponent>
+        ></CalcOperatorBtnComponent>
         <CalcBtnComponent
           title="1"
           className={grayColor}
@@ -160,11 +160,11 @@ const CalculatorComponent = () => {
           className={grayColor}
           onClickCalcBtn={numberBtn}
         ></CalcBtnComponent>
-        <CalcPlusBtnComponent
+        <CalcOperatorBtnComponent
           title="＋"
           className={orangeColor}
           onClickCalcBtn={plusBtn}
-        ></CalcPlusBtnComponent>
+        ></CalcOperatorBtnComponent>
         <CalcBtnComponent
           title="0"
           className={`col-span-2 ${grayColor}`}
@@ -175,11 +175,11 @@ const CalculatorComponent = () => {
           className={grayColor}
           onClickCalcBtn={numberBtn}
         ></CalcBtnComponent>
-        <CalcBtnComponent
+        <CalcOperatorBtnComponent
           title="="
           className={orangeColor}
           onClickCalcBtn={eqBtn}
-        ></CalcBtnComponent>
+        ></CalcOperatorBtnComponent>
       </div>
     </div>
   );

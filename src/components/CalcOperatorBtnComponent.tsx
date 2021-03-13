@@ -6,7 +6,7 @@ interface CalcBtnProps {
   onClickCalcBtn: () => void;
 }
 
-const CalcPlusBtnComponent: React.FC<CalcBtnProps> = ({
+const CalcOperatorBtnComponent: React.FC<CalcBtnProps> = ({
   title,
   className,
   onClickCalcBtn,
@@ -23,4 +23,4 @@ const CalcPlusBtnComponent: React.FC<CalcBtnProps> = ({
     </div>
   );
 };
-export default CalcPlusBtnComponent;
+export default CalcOperatorBtnComponent;
