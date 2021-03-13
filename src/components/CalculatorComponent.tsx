@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import CalcBtnComponent from "./CalcBtnComponent";
+import CalcPlusBtnComponent from "./CalcPlusBtnComponent";
 
 let displayArray: string[] = [];
 let calcArray: string[] = [];
@@ -159,11 +160,11 @@ const CalculatorComponent = () => {
           className={grayColor}
           onClickCalcBtn={numberBtn}
         ></CalcBtnComponent>
-        <CalcBtnComponent
+        <CalcPlusBtnComponent
           title="＋"
           className={orangeColor}
           onClickCalcBtn={plusBtn}
-        ></CalcBtnComponent>
+        ></CalcPlusBtnComponent>
         <CalcBtnComponent
           title="0"
           className={`col-span-2 ${grayColor}`}
