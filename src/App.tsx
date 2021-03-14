@@ -1,16 +1,17 @@
 import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
-import ClockComponent from "./components/ClockComponent";
+import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
+import ClockComponent from "./routes/clock/ClockPage";
+import CalculatorComponent from "./routes/calculator/CalculatorPage";
 
 function App() {
   return (
-    <div className="App">
-        <img src={logo} className="App-logo" alt="logo" />
-        <div className="absolute">
-          <ClockComponent></ClockComponent>
-        </div>
-    </div>
+    <BrowserRouter>
+      <Switch>
+        <Route path="/clock" exact component={ClockComponent} />
+        <Route path="/calculator" exact component={CalculatorComponent} />
+        <Redirect to="/clock" />
+      </Switch>
+    </BrowserRouter>
   );
 }
 
